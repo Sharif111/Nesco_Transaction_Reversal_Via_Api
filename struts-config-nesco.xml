@@ -1,0 +1,300 @@
+ <!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+
+<struts-config>
+
+	<!-- ============ Form Bean Definitions ============ -->
+	<!-- =============================================== -->
+	<form-beans>
+							
+			
+	<form-bean name="nescoDayEndTransactionSettlementForm" type="com.adminpanel.merchantadminpanel.nesco.formbean.NescoDayEndTransactionSettlementForm"/>
+	<form-bean name="nescoDayEndTransactionSettlementReportForm" type="com.adminpanel.merchantadminpanel.nesco.report.formbean.NescoDayEndTransactionSettlementReportForm"/>
+	<form-bean name="nescoTransactionReverseForm" type="com.adminpanel.merchantadminpanel.nesco.formbean.NescoTransactionReverseForm"/>
+	<form-bean name="nescoTransactionReverseReportForm" type="com.adminpanel.merchantadminpanel.nesco.report.formbean.NescoTransactionReverseReportForm"/>
+	
+		
+	   		       
+	</form-beans>
+
+	<!-- ============ Action Mapping Definitions ============ -->
+	<!-- ==================================================== -->
+    <action-mappings>
+	
+	
+	<!-- Nesco DayEnd Transaction Settlement Start--> 
+	<!-- ==================================== -->
+	
+    <action path="/nescoDayEndTransactionSettlement"
+        type="com.adminpanel.merchantadminpanel.nesco.action.NescoDayEndTransactionSettlementAction"
+        name="nescoDayEndTransactionSettlementForm"
+        validate="false"
+        input="/pages/merchantadminpanel/nesco/NescoDayEndTransactionSettlement.jsp">
+        <forward name="success" path="/pages/merchantadminpanel/nesco/NescoDayEndTransactionSettlement.jsp"/>
+        <forward name="failure" path="/pages/merchantadminpanel/nesco/NescoDayEndTransactionSettlement.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/merchantadminpanelMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+	<action path="/showDataNescoDayEndTransactionSettlement"
+         type="com.adminpanel.merchantadminpanel.nesco.action.NescoDayEndTransactionSettlementAction"
+        name="nescoDayEndTransactionSettlementForm"
+        validate="false"
+        input="/pages/merchantadminpanel/nesco/NescoDayEndTransactionSettlement.jsp">
+        <forward name="success" path="/pages/merchantadminpanel/nesco/NescoDayEndTransactionSettlement.jsp"/>
+        <forward name="failure" path="/pages/merchantadminpanel/nesco/NescoDayEndTransactionSettlement.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/merchantadminpanelMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+		
+	<action path="/executeNescoDayEndTransactionSettlement"
+         type="com.adminpanel.merchantadminpanel.nesco.action.NescoDayEndTransactionSettlementAction"
+        name="nescoDayEndTransactionSettlementForm"
+        validate="false"
+        input="/pages/merchantadminpanel/nesco/NescoDayEndTransactionSettlement.jsp">
+        <forward name="success" path="/pages/merchantadminpanel/nesco/NescoDayEndTransactionSettlement.jsp"/>
+        <forward name="failure" path="/pages/merchantadminpanel/nesco/NescoDayEndTransactionSettlement.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/merchantadminpanelMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+	<action path="/cancelNescoDayEndTransactionSettlement"
+        type="com.adminpanel.merchantadminpanel.nesco.action.NescoDayEndTransactionSettlementAction"
+        name="nescoDayEndTransactionSettlementForm"
+        validate="false"
+         input="/pages/merchantadminpanel/nesco/NescoDayEndTransactionSettlement.jsp">
+        <forward name="success" path="/pages/menu/MerchantAdminMenu.jsp"/>
+        <forward name="failure"  path="/pages/merchantadminpanel/nesco/NescoDayEndTransactionSettlement.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/MerchantAdminMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	<action path="/logOutIBanking" 
+		 type="com.adminpanel.merchantadminpanel.nesco.action.NescoDayEndTransactionSettlementAction"
+        name="nescoDayEndTransactionSettlementForm"
+        validate="false"
+		input="/index.jsp">
+		<forward name="success" path="/index.jsp"/>
+		<forward name="failure" path="/pages/menu/ibankingMenu.jsp"/>
+		<forward name="sessionExpire" path = "/index.jsp"/>
+		<forward name="sessionMyBankMenu" path="/pages/menu/MerchantAdminMenu.jsp"/>
+		<forward name="fatalError" path="/index.jsp"/>
+	</action>
+	
+	
+		
+	<!-- Nesco DayEnd Transaction Settlement End--> 
+	<!-- ==================================== -->
+	
+	
+	<!-- Nesco DayEnd Transaction Settlement Report Start--> 
+	<!-- ==================================== -->
+	
+    <action path="/nescoDayEndTransactionSettlementReport"
+        type="com.adminpanel.merchantadminpanel.nesco.report.action.NescoDayEndTransactionSettlementReportAction"
+        name="nescoDayEndTransactionSettlementReportForm"
+        validate="false"
+        input="/pages/merchantadminpanel/nesco/report/NescoDayEndTransactionSettlementReport.jsp">
+        <forward name="success" path="/pages/merchantadminpanel/nesco/report/NescoDayEndTransactionSettlementReport.jsp"/>
+        <forward name="failure" path="/pages/merchantadminpanel/nesco/report/NescoDayEndTransactionSettlementReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/merchantadminpanelMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+	<action path="/showDataNescoDayEndTransactionSettlementReport"
+         type="com.adminpanel.merchantadminpanel.nesco.report.action.NescoDayEndTransactionSettlementReportAction"
+        name="nescoDayEndTransactionSettlementReportForm"
+        validate="false"
+        input="/pages/merchantadminpanel/nesco/report/NescoDayEndTransactionSettlementReport.jsp">
+        <forward name="success" path="/pages/merchantadminpanel/nesco/report/NescoDayEndTransactionSettlementReport.jsp"/>
+        <forward name="failure" path="/pages/merchantadminpanel/nesco/report/NescoDayEndTransactionSettlementReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/merchantadminpanelMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+	<action path="/cancelNescoDayEndTransactionSettlementReport"
+        type="com.adminpanel.merchantadminpanel.nesco.report.action.NescoDayEndTransactionSettlementReportAction"
+        name="nescoDayEndTransactionSettlementReportForm"
+        validate="false"
+         input="/pages/merchantadminpanel/nesco/report/NescoDayEndTransactionSettlementReport.jsp">
+        <forward name="success" path="/pages/menu/MerchantAdminMenu.jsp"/>
+        <forward name="failure"  path="/pages/merchantadminpanel/nesco/report/NescoDayEndTransactionSettlementReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/MerchantAdminMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	<action path="/logOutIBanking" 
+		 type="com.adminpanel.merchantadminpanel.nesco.action.NescoDayEndTransactionSettlementAction"
+        name="nescoDayEndTransactionSettlementForm"
+        validate="false"
+		input="/index.jsp">
+		<forward name="success" path="/index.jsp"/>
+		<forward name="failure" path="/pages/menu/ibankingMenu.jsp"/>
+		<forward name="sessionExpire" path = "/index.jsp"/>
+		<forward name="sessionMyBankMenu" path="/pages/menu/MerchantAdminMenu.jsp"/>
+		<forward name="fatalError" path="/index.jsp"/>
+	</action>
+	
+	
+		
+	<!-- Nesco DayEnd Transaction Settlement Report End--> 
+	<!-- ==================================== -->
+	
+	
+	
+	<!-- Nesco Transaction Reverse Start--> 
+	<!-- ==================================== -->
+	
+    <action path="/nescoTransactionReverse"
+        type="com.adminpanel.merchantadminpanel.nesco.action.NescoTransactionReverseAction"
+        name="nescoTransactionReverseForm"
+        validate="false"
+        input="/pages/merchantadminpanel/nesco/NescoTransactionReverse.jsp">
+        <forward name="success" path="/pages/merchantadminpanel/nesco/NescoTransactionReverse.jsp"/>
+        <forward name="failure" path="/pages/merchantadminpanel/nesco/NescoTransactionReverse.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/merchantadminpanelMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	<action path="/reversalDetailsOfNescoTransactionReversal"
+        type="com.adminpanel.merchantadminpanel.nesco.action.NescoTransactionReverseAction"
+        name="nescoTransactionReverseForm"
+        validate="false"
+        input="/pages/merchantadminpanel/nesco/NescoTransactionReverse.jsp">
+        <forward name="success" path="/pages/merchantadminpanel/nesco/NescoTransactionReversalDetails.jsp"/>
+        <forward name="failure" path="/pages/merchantadminpanel/nesco/NescoTransactionReversalDetails.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/merchantadminpanelMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+	<action path="/executeNescoTransactionReverse"
+         type="com.adminpanel.merchantadminpanel.nesco.action.NescoTransactionReverseAction"
+        name="nescoTransactionReverseForm"
+        validate="false"
+        input="/pages/merchantadminpanel/nesco/NescoTransactionReverse.jsp">
+        <forward name="success" path="/pages/merchantadminpanel/nesco/NescoTransactionReverse.jsp"/>
+        <forward name="failure" path="/pages/merchantadminpanel/nesco/NescoTransactionReverse.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/merchantadminpanelMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+	<action path="/showDataNescoTransactionReverse"
+         type="com.adminpanel.merchantadminpanel.nesco.action.NescoTransactionReverseAction"
+        name="nescoTransactionReverseForm"
+        validate="false"
+        input="/pages/merchantadminpanel/nesco/NescoTransactionReverse.jsp">
+        <forward name="success" path="/pages/merchantadminpanel/nesco/NescoTransactionReversalDetails.jsp"/>
+        <forward name="failure" path="/pages/merchantadminpanel/nesco/NescoTransactionReversalDetails.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/merchantadminpanelMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+	<action path="/cancelNescoTransactionReverse"
+        type="com.adminpanel.merchantadminpanel.nesco.action.NescoTransactionReverseAction"
+        name="nescoTransactionReverseForm"
+        validate="false"
+         input="/pages/merchantadminpanel/nesco/NescoTransactionReverse.jsp">
+        <forward name="success" path="/pages/menu/MerchantAdminMenu.jsp"/>
+        <forward name="failure"  path="/pages/merchantadminpanel/nesco/NescoTransactionReverse.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/MerchantAdminMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	<action path="/logOutIBanking" 
+		 type="com.adminpanel.merchantadminpanel.nesco.action.NescoTransactionReverseAction"
+        name="nescoTransactionReverseForm"
+        validate="false"
+		input="/index.jsp">
+		<forward name="success" path="/index.jsp"/>
+		<forward name="failure" path="/pages/menu/ibankingMenu.jsp"/>
+		<forward name="sessionExpire" path = "/index.jsp"/>
+		<forward name="sessionMyBankMenu" path="/pages/menu/MerchantAdminMenu.jsp"/>
+		<forward name="fatalError" path="/index.jsp"/>
+	</action>
+		
+	<!-- Nesco Transaction Reverse End--> 
+	<!-- ==================================== -->
+	
+	
+	
+	
+	
+	
+	<!-- Nesco Transaction Reverse Report Start--> 
+	<!-- ==================================== -->
+	
+    <action path="/nescoTransactionReverseReport"
+        type="com.adminpanel.merchantadminpanel.nesco.report.action.NescoTransactionReverseReportAction"
+        name="nescoTransactionReverseReportForm"
+        validate="false"
+        input="/pages/merchantadminpanel/nesco/report/NescoTransactionReverseReport.jsp">
+        <forward name="success" path="/pages/merchantadminpanel/nesco/report/NescoTransactionReverseReport.jsp"/>
+        <forward name="failure" path="/pages/merchantadminpanel/nesco/report/NescoTransactionReverseReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/merchantadminpanelMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	<action path="/reversalDetailsOfNescoTransactionReversalReport"
+        type="com.adminpanel.merchantadminpanel.nesco.report.action.NescoTransactionReverseReportAction"
+        name="nescoTransactionReverseReportForm"
+        validate="false"
+        input="/pages/merchantadminpanel/nesco/report/NescoTransactionReverseReport.jsp">
+        <forward name="success" path="/pages/merchantadminpanel/nesco/report/NescoTransactionReverseReport.jsp"/>
+        <forward name="failure" path="/pages/merchantadminpanel/nesco/report/NescoTransactionReverseReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/merchantadminpanelMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+	
+	<action path="/showDataNescoTransactionReverseReport"
+         type="com.adminpanel.merchantadminpanel.nesco.report.action.NescoTransactionReverseReportAction"
+        name="nescoTransactionReverseReportForm"
+        validate="false"
+        input="/pages/merchantadminpanel/nesco/report/NescoTransactionReverseReport.jsp">
+        <forward name="success" path="/pages/merchantadminpanel/nesco/report/NescoTransactionReverseReport.jsp"/>
+        <forward name="failure" path="/pages/merchantadminpanel/nesco/report/NescoTransactionReverseReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/merchantadminpanelMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	
+	<action path="/cancelNescoTransactionReverseReport"
+        type="com.adminpanel.merchantadminpanel.nesco.report.action.NescoTransactionReverseReportAction"
+        name="nescoTransactionReverseReportForm"
+        validate="false"
+         input="/pages/merchantadminpanel/nesco/report/NescoTransactionReverseReport.jsp">
+        <forward name="success" path="/pages/menu/MerchantAdminMenu.jsp"/>
+        <forward name="failure"  path="/pages/merchantadminpanel/nesco/report/NescoTransactionReverseReport.jsp"/>
+        <forward name="sessionExpire" path = "/index.jsp"/>
+        <forward name="sessionMyBankMenu" path="/pages/menu/MerchantAdminMenu.jsp"/>
+        <forward name="fatalError" path = "/index.jsp"/>
+    </action>
+	<action path="/logOutIBanking" 
+		 type="com.adminpanel.merchantadminpanel.nesco.report.action.NescoTransactionReverseReportAction"
+        name="nescoTransactionReverseReportForm"
+        validate="false"
+		input="/index.jsp">
+		<forward name="success" path="/index.jsp"/>
+		<forward name="failure" path="/pages/menu/ibankingMenu.jsp"/>
+		<forward name="sessionExpire" path = "/index.jsp"/>
+		<forward name="sessionMyBankMenu" path="/pages/menu/MerchantAdminMenu.jsp"/>
+		<forward name="fatalError" path="/index.jsp"/>
+	</action>
+		
+	<!-- Nesco Transaction Reverse  Report End--> 
+	<!-- ==================================== -->
+	
+		
+		
+	</action-mappings>
+	
+</struts-config>
